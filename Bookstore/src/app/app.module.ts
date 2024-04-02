@@ -9,7 +9,10 @@ import { ForgotPasswordComponent } from './Components/forgot-password/forgot-pas
 import { BookCardComponent } from './Components/book-card/book-card.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { FooterComponent } from './Components/footer/footer.component';
-
+import { CommonModule } from '@angular/common';
+import {  ReactiveFormsModule } from '@angular/forms';
+import {  HttpClientModule } from '@angular/common/http';
+ReactiveFormsModule
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,10 @@ import { FooterComponent } from './Components/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()

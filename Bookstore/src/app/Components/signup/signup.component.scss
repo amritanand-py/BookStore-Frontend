@@ -1,74 +1,67 @@
-
 *{
-    margin: 0;
-    padding: 0;
-    color: red; /* This might be overridden by later styles */
-  }
-  
-  #container{
-    top: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba($color: #000000, $alpha: 0.31);
-    // opacity: 31%;
-  }
-  
-  /* Responsive #lowerdiv with position and size constraints */
-  #lowerdiv {
-    position: absolute; /* Ensures positioning relative to viewport */
-    top: 185px; /* Maintains original top position on larger screens */
-    left: 320px; /* Maintains original left position on larger screens */
-    width: 624px; /* Maintains original width on larger screens */
-    height: 391px; /* Maintains original height on larger screens */
-    background: #F5F5F5 0% 0% no-repeat padding-box;
-    border-radius: 21px;
-    opacity: 1;
-  
-    /* Media query for responsive behavior on smaller screens */
-    @media (max-width: 900px) { /* Adjust breakpoint as needed */
-      width: calc(100vw - 60px); /* Scales width based on viewport */
-      max-width: 624px; /* Ensures width doesn't exceed original size */
-      left: 15px; /* Adjust left position for better centering */
-    }
+  margin: 0;
+  padding: 0;
+}
 
-    // background: transparent url('../../../assets/signuplogo.png') 0% 0% no-repeat padding-box;
-    // top: 237px; /* Adjust as needed for desired positioning */
-    // left: 373px; /* Adjust as needed for desired positioning */
-    // width: 245px; /* Adjust as needed for desired positioning */
-    // height: 245px; /* Adjust as needed for desired positioning */
-    // opacity: 1;
+#container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0, 0, 0.31);
+}
+#lowerdiv {
+  position: absolute;
+  top: 20%; /* Adjust according to your layout */
+  left: 25%; /* Adjust according to your layout */
+  width: 40%; /* Adjust according to your layout */
+  height: 50%; /* Adjust according to your layout */
+  background: #F5F5F5;
+  border-radius: 21px;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
 
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+      /* Adjust styles for smaller screens */
+      top: 10%;
+      left: 10%;
+      width: 80%;
+      height: 60%;
   }
-  
-  /* Responsive #formDiv Styles (relative to #lowerdiv) */
-  #formDiv {
-    position: absolute;
-    top: -10px; /* Adjust as needed for desired positioning */
-    left: 305px; /* Adjust as needed for desired positioning */
-    width: 59%; /* Ensures full width within #lowerdiv */
-    height: 105%; /* Ensures full height within #lowerdiv */
-  
-    /* UI Properties (maintain from previous code) */
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 5px 15px #00000029;
-    border: 1px solid #E4E4E4;
-    border-radius: 6px;
-    opacity: 1;
-  
-    /* Consider adding media queries for #formDiv on smaller screens */
-    @media (max-width: 768px) { /* Adjust breakpoint as needed */
-        padding: 20px; /* Add padding for better spacing on smaller screens */
-      }
-  }
+}
 
+#left-content {
+  flex: 1;
+  text-align: center;
+  margin-left: 5%;
+}
 
-  img{
-    position: relative;
-    top: 52px; /* Adjust as needed for desired positioning */
-    left: 53px; /* Adjust as needed for desired positioning */
-    width: 245px; /* Adjust as needed for desired positioning */
-    height: 245px; /* Adjust as needed for desired positioning */
-    opacity: 1    
-  }
-  
+#left-content img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+#right-content {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -60px;
+}
+
+#card {
+  width: 90%;
+  height: 400px;
+  background: #FFFFFF;
+  box-shadow: 0px 5px 15px #00000029;
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+  opacity: 1;
+  /* Additional styling as needed */
+}
+
