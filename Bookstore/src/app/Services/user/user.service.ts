@@ -21,7 +21,7 @@ export class UserService {
           // 'Authorization': 'token'
       })
     }
-    return this.httpService.postService('https://localhost:44362/api/User/Register',reqData,false,header)
+    return this.httpService.postService('https://localhost:7284/api/User/',reqData,false,header)
   }
 
   login(reqData: any){
@@ -31,7 +31,7 @@ export class UserService {
         // 'Authorization':'Bearer ' + token 
       })
     }
-    return this.httpService.postService('https://localhost:44362/api/User/Login',reqData,false,header)
+    return this.httpService.postService('https://localhost:7284/api/User/Login',reqData,false,header)
   }
 
   forgetPassword(requestData: any){
