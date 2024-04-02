@@ -6,9 +6,16 @@
         </div>
         <div id="right-content">
             <div id="card">
-                Form content goes here
+                
+                <form [formGroup]="loginform" >
+                    <!-- Login form fields -->
+                    <input type="email" placeholder="Email" formControlName="email">
+                    <input type="password" placeholder="Password" formControlName="password">
+                    <button type="submit" id="loginbtn" (click)="loginUser()">Login</button>
+                </form>
             </div>
             <!-- Other content on the right side -->
+            
         </div>
 
         
