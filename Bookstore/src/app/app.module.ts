@@ -12,6 +12,7 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { CommonModule } from '@angular/common';
 import {  ReactiveFormsModule } from '@angular/forms';
 import {  HttpClientModule } from '@angular/common/http';
+import { DashBoardComponent } from './Components/dash-board/dash-board.component';
 import { BookDetailPageComponent } from './Components/book-detail-page/book-detail-page.component';
 ReactiveFormsModule
 @NgModule({
@@ -23,7 +24,9 @@ ReactiveFormsModule
     BookCardComponent,
     NavbarComponent,
     FooterComponent,
+    DashBoardComponent,
     BookDetailPageComponent
+
   ],
   imports: [
     BrowserModule,
