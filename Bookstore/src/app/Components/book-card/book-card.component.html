@@ -1,7 +1,7 @@
 
 <div id="container">
 
-    <div id="card">
+    <div id="card" [routerLink]="['/Bookdetails/6']">
         <div id="upperhalf">
             <img src="../../../assets/Image 11.png">
         </div>
@@ -9,7 +9,7 @@
             <p id="title">{{book.title}}</p>
             <p id="Author">{{book.author}}</p>
             <p id="rating">{{book.rating}}⭐</p>(20)
-            <p id="price">Rs. 1500</p>
+            <p id="price">{{book.price}}</p>
         </div>
     </div>
 </div>
