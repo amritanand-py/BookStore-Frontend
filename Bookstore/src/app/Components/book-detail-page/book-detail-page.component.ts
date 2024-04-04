@@ -11,12 +11,13 @@ export class BookDetailPageComponent implements OnInit{
 @Input() id:number=5;
   book:any;
   outcome:any;
- quantity: number = 1; // Initialize quantity to 1
+  quantity: number = 1; // Initialize quantity to 1
+  addToBagClicked: boolean = false;
 
-  constructor(private detailServices: DetailsService) {
-    
-    
-  }
+  constructor(private detailServices: DetailsService) {}
+
+//---------------------------------------------------------------------------------------------------
+
   ngOnInit(): void {
     this.detailServices.displayDetailBook(this.id).subscribe(
       (response: any) => {
@@ -31,9 +32,25 @@ export class BookDetailPageComponent implements OnInit{
     );
 
   }
+//---------------------------------------------------------------------------------------------------
 
+  addToBag() {
+    this.addToBagClicked = true;
+  }
 
-  
+//---------------------------------------------------------------------------------------------------
+  count: number = 1;
+
+  increase() {
+    this.count++;
+  }
+
+  decrease() {
+    if (this.count > 1) {
+      this.count--;
+    }
+  }
+//---------------------------------------------------------------------------------------------------
   
 
 }

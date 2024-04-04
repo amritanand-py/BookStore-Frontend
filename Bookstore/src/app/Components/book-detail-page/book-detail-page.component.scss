@@ -5,6 +5,7 @@
 
 .container{
     background-color:blanchedalmond;
+    height: 100vh;
     display: flex;
     max-width: 968px;
     width: 100%;
@@ -33,10 +34,29 @@
 }
 
 #leftcontainer{
-    
+    position: relative;
+    background-color: aqua;
+    height: 100%;
     padding: 15px;
 }
 
 #rightcontainer{
-    
+    background-color: red;
+    height: 100%;
+    padding: 15px;
+}
+
+#buttons{
+    background-color: greenyellow;
+    display: flex;
+    justify-content: space-between;
+}
+
+.counterbtn{
+    width: 38px;
+    height: 38px;
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    border: 1px solid #DBDBDB;
+    opacity: 1;
+    border-radius: 50%;
 }
