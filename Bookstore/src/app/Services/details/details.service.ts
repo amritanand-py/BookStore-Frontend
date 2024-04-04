@@ -16,11 +16,11 @@ export class DetailsService {
   }
 
   token:any;
-  id:number=1;
-  displayBook(){
+  // id:number=1;
+  displayDetailBook(id:any){
     const header = new HttpHeaders({
       'Content-type':'application/json'
     });
-    return this.http.getService(`https://localhost:7284/api/Book/getbyID?id=${this.id}`,true,{header});
+    return this.http.putService(`https://localhost:7284/api/Book/getbyID?id=${id}`,true);
   }
 }
