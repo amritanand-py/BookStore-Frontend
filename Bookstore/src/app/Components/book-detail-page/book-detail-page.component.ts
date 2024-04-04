@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { DetailsService } from '../../Services/details/details.service';
 
 @Component({
@@ -11,6 +11,7 @@ export class BookDetailPageComponent implements OnInit{
 @Input() id:number=5;
   book:any;
   outcome:any;
+ quantity: number = 1; // Initialize quantity to 1
 
   constructor(private detailServices: DetailsService) {
     
@@ -30,6 +31,9 @@ export class BookDetailPageComponent implements OnInit{
     );
 
   }
+
+
+  
   
 
 }
