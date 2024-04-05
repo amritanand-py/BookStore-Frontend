@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#container{
+    // background-color: aqua;
+    width: 60%;
+    height: 200px;
+    display: flex;
+    
+}
+#leftContainer{
+    // background-color: rebeccapurple;
+    width: 20%;
+    align-self: center;
+    
+}
+#rightContainer{
+    // background-color: blanchedalmond;
+    width: 80%;
+}
+img{
+    height: 65px;
+    padding: 12px;
+}
