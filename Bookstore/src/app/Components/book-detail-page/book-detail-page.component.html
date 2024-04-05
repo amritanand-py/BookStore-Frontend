@@ -5,7 +5,15 @@
     />
 
     <div id="buttons">
-        <button type="button">ADD TO BAG</button>
+      
+      <button *ngIf="!addToBagClicked" (click)="addToBag()">ADD TO BAG</button>
+      <div class="counter" *ngIf="addToBagClicked">
+        <button (click)="decrease()" class="counterbtn">-</button>
+        <span>{{ count }}</span>
+        <button (click)="increase()" class="counterbtn">+</button>
+      </div>
+
+        <!-- <button type="button">ADD TO BAG</button> -->
         <button type="button">♥ WISHLIST</button>
     </div>
   </div>
