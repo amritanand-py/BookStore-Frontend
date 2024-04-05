@@ -15,6 +15,7 @@ import {  HttpClientModule } from '@angular/common/http';
 import { DashBoardComponent } from './Components/dash-board/dash-board.component';
 import { BookDetailPageComponent } from './Components/book-detail-page/book-detail-page.component';
 import { CartPageComponent } from './Components/cart-page/cart-page.component';
+import { CartCardComponent } from './Components/cart-card/cart-card.component';
 ReactiveFormsModule
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ ReactiveFormsModule
     FooterComponent,
     DashBoardComponent,
     BookDetailPageComponent,
-    CartPageComponent
+    CartPageComponent,
+    CartCardComponent
 
   ],
   imports: [
